@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #2a0010; /* Granate oscuro */
+  background-color: #2a0010; 
   color: #fff;
   /*overflow: hidden;*/
 }
@@ -15,7 +15,7 @@ body {
 /* Menu de navegación */
 .menu {
   position: absolute;
-  top: 30px; /* <-- Ahora sí baja un poco */
+  top: 30px; 
   left: 0;
   right: 0;
   text-align: center;
@@ -74,10 +74,10 @@ body {
 /* Carrusel de fondo horizontal con imágenes horizontales */
 .background-carousel {
   position: absolute;
-  top: 0; /* <-- Antes decía 100px */
+  top: 0; 
   left: 0;
   width: 100%;
-  height: 100vh; /* <-- Antes decía calc(100vh - 100px) */
+  height: 100vh; 
   overflow: hidden;
   z-index: 1;
   display: flex;
@@ -86,14 +86,14 @@ body {
 
 .carousel-track {
   display: flex;
-  gap: 10px; /* Espacio entre imágenes */
+  gap: 10px; 
   animation: scroll-horizontal 40s linear infinite;
   opacity: 0.50;
 }
 
 .carousel-track img {
   width: 100vw;
-  height: 100vh; /* antes: 95vh */
+  height: 100vh; 
   object-fit: cover;
   border-radius: 0;
 }
@@ -124,15 +124,15 @@ body {
   display: flex;
   animation: scroll-text 25s linear infinite;
   white-space: nowrap;
-  gap: 80px; /* Espacio entre frases */
+  gap: 80px; 
   padding-left: 100%;
 }
 
 .marquee-track span {
-  font-family: 'Montserrat', sans-serif; /* misma fuente del índice */
+  font-family: 'Montserrat', sans-serif; 
   font-size: 14px;
   font-weight: 500;
-  color: #2a0010; /* mismo granate del fondo */
+  color: #2a0010; 
 }
 
 /* Animación */
@@ -162,7 +162,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;  /* Para asegurarnos de que no se desborde la imagen */
+  overflow: hidden;  
 }
 
 .imagen-fondo {
@@ -220,12 +220,12 @@ body, html {
   gap: 10px;
 }
 
-/* Estilos para la página de "Mis trabajos" */
+/* Página de "Mis trabajos" */
 
 /* Título "Mis trabajos" */
 .hero-mis-trabajos {
   background-color: #2a0010;
-  padding: 40px 0 20px 0; /* 40px arriba, 20px abajo */
+  padding: 40px 0 20px 0; 
   text-align: center;
 }
 
@@ -234,16 +234,16 @@ body, html {
   font-size: 42px;
   color: white;
   text-transform: lowercase;
-  margin-top: 90px; /* Añadir margen superior para bajarlo */
+  margin-top: 90px; 
 }
 
 /* Sección de los trabajos */
 .contenido-trabajos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Espacio entre las tarjetas */
+  justify-content: space-around; 
   padding: 20px;
-  background-color: #2a0010; /* Fondo oscuro */
+  background-color: #2a0010; 
   margin-top: 20px;
 }
 
@@ -251,10 +251,10 @@ body, html {
 .trabajo {
   background-color: #ffffff;
   margin: 20px;
-  width: 30%; /* Mantiene 3 tarjetas en línea */
-  border-radius: 15px; /* Bordes más redondeados */
+  width: 30%; 
+  border-radius: 15px; 
   color: #2a0010;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Sombra más suave y difusa */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); 
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -263,22 +263,22 @@ body, html {
 }
 
 .trabajo:hover {
-  transform: translateY(-10px); /* Efecto de elevación en hover */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Aumento de la sombra */
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); 
 }
 
 .imagen-trabajo img {
   width: 100%;
-  height: auto; /* Ajusta la altura para mantener las proporciones */
-  object-fit: contain; /* Asegura que la imagen se ajuste sin recortes */
-  padding: 10px; /* Añadimos margen alrededor de la imagen */
-  border-top-left-radius: 8px; /* Redondeamos las esquinas superiores */
-  border-top-right-radius: 8px; /* Redondeamos las esquinas superiores */
+  height: auto; 
+  object-fit: contain; 
+  padding: 10px; 
+  border-top-left-radius: 8px; 
+  border-top-right-radius: 8px; 
 }
 
 .contenido-texto {
-  padding: 15px; /* Añadimos margen interno */
-  text-align: center; /* Alineamos el texto al centro */
+  padding: 15px; 
+  text-align: center; 
   flex-grow: 1;
 }
 
@@ -293,11 +293,11 @@ body, html {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 20px;
-  color: #555; /* Color más suave para el texto */
+  color: #555; 
 }
 
 .trabajo-pequena {
-  height: auto; /* Ajustamos para que las tarjetas no sean pequeñas */
+  height: auto; 
 }
 
 .boton-detalle {
@@ -310,10 +310,10 @@ body, html {
   text-align: center;
   text-decoration: none;
   border: none;
-  border-radius: 50px; /* Esquinas redondeadas */
+  border-radius: 50px; 
   transition: background-color 0.3s ease, transform 0.2s ease;
   width: 60%;
-  margin: 10px auto 0; /* Centrado y espacio superior */
+  margin: 10px auto 0; 
 }
 
 .boton-detalle:hover {
@@ -324,8 +324,8 @@ body, html {
 
 @media (max-width: 768px) {
   .trabajo {
-    width: 90%; /* En pantallas pequeñas, las tarjetas ocupan casi todo el ancho */
-    min-height: auto; /* La altura es automática para ajustarse al contenido */
+    width: 90%; 
+    min-height: auto; 
   }
 }
 
