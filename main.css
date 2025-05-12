@@ -1,0 +1,466 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #2a0010; /* Granate oscuro */
+  color: #fff;
+  /*overflow: hidden;*/
+}
+
+/* Menu de navegación */
+.menu {
+  position: absolute;
+  top: 30px; /* <-- Ahora sí baja un poco */
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 100;
+  background-color: transparent;
+  padding: 15px 0;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.menu ul li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+
+/* Título en el centro */
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  text-align: center;
+}
+
+.portfolio-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: bold;
+  color: white;
+  text-transform: lowercase;
+}
+
+/* Carrusel de fondo horizontal con imágenes horizontales */
+.background-carousel {
+  position: absolute;
+  top: 0; /* <-- Antes decía 100px */
+  left: 0;
+  width: 100%;
+  height: 100vh; /* <-- Antes decía calc(100vh - 100px) */
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 10px; /* Espacio entre imágenes */
+  animation: scroll-horizontal 40s linear infinite;
+  opacity: 0.50;
+}
+
+.carousel-track img {
+  width: 100vw;
+  height: 100vh; /* antes: 95vh */
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Animación horizontal continua */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.bottom-marquee {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  z-index: 30;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-track {
+  display: flex;
+  animation: scroll-text 25s linear infinite;
+  white-space: nowrap;
+  gap: 80px; /* Espacio entre frases */
+  padding-left: 100%;
+}
+
+.marquee-track span {
+  font-family: 'Montserrat', sans-serif; /* misma fuente del índice */
+  font-size: 14px;
+  font-weight: 500;
+  color: #2a0010; /* mismo granate del fondo */
+}
+
+/* Animación */
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Estilos para la sección "Sobre mí" */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'EB Garamond', serif;
+  background-color: #2a0010;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Imagen de fondo */
+.hero-sobre-mi {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;  /* Para asegurarnos de que no se desborde la imagen */
+}
+
+.imagen-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.titulo-principal {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  position: relative;
+  z-index: 1;
+  text-transform: lowercase;
+}
+
+
+/* Sección con scroll */
+.contenido-scroll {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 180px;
+  padding: 80px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #2a0010;
+  flex-wrap: wrap;
+}
+
+.texto {
+  flex: 2;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: justify;
+  font-family: 'EB Garamond', serif;
+}
+.texto p {
+  margin-bottom: 20px;
+}
+
+.habilidades {
+  flex: 1;
+  font-size: 1.1rem;
+  font-family: 'EB Garamond', serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estilos para la página de "Mis trabajos" */
+
+/* Título "Mis trabajos" */
+.hero-mis-trabajos {
+  background-color: #2a0010;
+  padding: 40px 0 20px 0; /* 40px arriba, 20px abajo */
+  text-align: center;
+}
+
+.titulo-principal {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: white;
+  text-transform: lowercase;
+  margin-top: 90px; /* Añadir margen superior para bajarlo */
+}
+
+/* Sección de los trabajos */
+.contenido-trabajos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Espacio entre las tarjetas */
+  padding: 20px;
+  background-color: #2a0010; /* Fondo oscuro */
+  margin-top: 20px;
+}
+
+/* Estilo general de las tarjetas */
+.trabajo {
+  background-color: #ffffff;
+  margin: 20px;
+  width: 30%; /* Mantiene 3 tarjetas en línea */
+  border-radius: 15px; /* Bordes más redondeados */
+  color: #2a0010;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Sombra más suave y difusa */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trabajo:hover {
+  transform: translateY(-10px); /* Efecto de elevación en hover */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Aumento de la sombra */
+}
+
+.imagen-trabajo img {
+  width: 100%;
+  height: auto; /* Ajusta la altura para mantener las proporciones */
+  object-fit: contain; /* Asegura que la imagen se ajuste sin recortes */
+  padding: 10px; /* Añadimos margen alrededor de la imagen */
+  border-top-left-radius: 8px; /* Redondeamos las esquinas superiores */
+  border-top-right-radius: 8px; /* Redondeamos las esquinas superiores */
+}
+
+.contenido-texto {
+  padding: 15px; /* Añadimos margen interno */
+  text-align: center; /* Alineamos el texto al centro */
+  flex-grow: 1;
+}
+
+.trabajo h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.trabajo p {
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #555; /* Color más suave para el texto */
+}
+
+.trabajo-pequena {
+  height: auto; /* Ajustamos para que las tarjetas no sean pequeñas */
+}
+
+.boton-detalle {
+  position: relative;
+  background-color: #2a0010;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px; /* Esquinas redondeadas */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 60%;
+  margin: 10px auto 0; /* Centrado y espacio superior */
+}
+
+.boton-detalle:hover {
+  background-color: #4a0020;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .trabajo {
+    width: 90%; /* En pantallas pequeñas, las tarjetas ocupan casi todo el ancho */
+    min-height: auto; /* La altura es automática para ajustarse al contenido */
+  }
+}
+
+/* Página fotografía */
+.titulo-pagina {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: white;
+  text-align: center;
+  margin-top: 120px;
+  text-transform: lowercase;
+}
+
+.flecha-volver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  z-index: 2;
+  font-family: 'Playfair Display', serif;
+}
+
+.galeria-fotos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px;
+  background-color: #2a0010;
+}
+
+.foto {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Tamaños variados */
+.foto.pequeña {
+  width: 200px;
+  height: 200px;
+}
+
+.foto.mediana {
+  width: 300px;
+  height: 300px;
+}
+
+.foto.vertical {
+  width: 30vw;
+  height: 85vh;
+  object-fit: cover;
+}
+
+.foto.grande {
+  width: 90vw;
+  height: 80vh;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* Página de Contacto */
+
+
+.contenido-contacto {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 40px;
+  text-align: center;
+  color: white;
+  font-family: 'EB Garamond', serif;
+}
+
+.contenido-contacto h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 20px;
+  text-transform: lowercase;
+}
+
+.contenido-contacto p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.contact-info {
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Error 404 */
+.error-404 {
+  background-color: #ffffff;
+  color: #2a0010;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 40px;
+}
+
+.error-404 h1 {
+  font-size: 90px;
+  margin-bottom: 20px;
+}
+
+.error-404 p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.volver-inicio {
+  font-size: 18px;
+  color: #2a0010;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.volver-inicio:hover {
+  opacity: 0.7;
+}
+

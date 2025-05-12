@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo 1 Detalle</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="card">
+        <!-- Botón de volver con una flecha visible -->
+        <button class="btn-back" onclick="window.history.back()">&#8592;</button>
+        
+        <!-- Contenedor de las imágenes -->
+        <div class="image-container">
+            <img src="images/mock up 2 copia.png" alt="Imagen 1">
+            <img src="images/mock up 3 copia.png" alt="Imagen 2">
+            <img src="images/mock up 4 copia.png" alt="Imagen 3">
+        </div>
+    </div>
+</body>
+<style> 
+    /* Estilos generales */
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #2a0010; /* Fondo burdeos */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    /* Estilo de la tarjeta blanca ajustada al contenido */
+    .card {
+    background-color: white;
+    width: 6000px;     /* ← Cambia este valor según el ancho que quieras */
+    height: 400px;     /* ← Cambia este valor según el alto que quieras */
+    padding: 50px;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+    /* Botón de "Volver" con solo la flecha visible */
+    .btn-back {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: transparent;
+        color: #2a0010;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+    }
+    
+    .btn-back:hover {
+        opacity: 0.7;
+    }
+    
+    /* Estilos para las imágenes dispuestas en horizontal */
+    .image-container {
+        display: flex;
+        gap: 20px;  /* Espacio entre las imágenes */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .image-container img {
+        max-width: 33%;  /* Aumentamos el tamaño de las imágenes */
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Estilo opcional para hover, puede ser ajustado o eliminado */
+    .image-container img:hover {
+        transform: scale(1.05);
+    }
+</style>
+</html>
